@@ -20,3 +20,20 @@ No se pudo crear el público de interacción con Instagram: la cuenta de Instagr
 | Conjunto "Eje Cafetero + Cali + Ibagué - WhatsApp - Advantage+" | 120252366767280168 | Destino WhatsApp; Pereira, Armenia, Manizales, Cartago (40 km), Ibagué (38 km), Cali (40 km); 21+; Advantage+ Audience y ubicaciones. ACTIVO |
 | Anuncio "Quieres venir a Pereira - video" | 120252366768520168 | Reutiliza la creatividad 1752990802587152 (mejor costo: 1.493 COP/conv.). En revisión |
 | Anuncio "Salón de reuniones - video" | 120252366768950168 | Reutiliza la creatividad 1624321159479985. En revisión |
+
+## Extensión de "Integración fin de año" (aprobada por el dueño)
+
+Meta no deja extender una promoción de Instagram desde la API (cambiar stop_time no se guardó). Se recreó como campaña normal:
+
+| Elemento | ID | Detalle |
+|---|---|---|
+| Campaña "Villa Juana - Integraciones fin de año (extensión)" | 120252366790850168 | Interacción → conversaciones, 10.000 COP/día (el presupuesto que liberó la pausa de "Escapadita"). ACTIVA |
+| Conjunto "Eje Cafetero + Cali + Ibagué - Instagram Direct - Advantage+" | 120252366802000168 | Termina el 29-oct-2026. Pereira, Armenia, Manizales, Cartago, Ibagué, Cali; 21+; Advantage+ Audience con el similar 1 % como sugerencia; todas las ubicaciones. ACTIVO |
+| Anuncio "Integración fin de año - post Instagram" | 120252366803140168 | Reutiliza la creatividad 2361402961277956 |
+| Promoción original "Buscas un sitio para tu integración" (120252283922470168) | — | PAUSADA para que no compita con la extensión (es el mismo anuncio; terminaba el 23-oct) |
+
+Datos de la promoción original: mujeres de 25-54 generaron 21 de 22 conversaciones; Historias de Instagram fue la ubicación más barata (1.757 COP por conversación, frente a 2.837 en el feed).
+
+### Gasto diario activo a partir de hoy
+- Mensajes WhatsApp (consolidada): 5.000 COP/día, sin fecha de fin
+- Integraciones (extensión): 10.000 COP/día hasta el 29-oct
