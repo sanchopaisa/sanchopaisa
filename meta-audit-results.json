@@ -1,0 +1,561 @@
+{
+  "platform": "meta",
+  "version": "1.0",
+  "generated_at": "2026-10-22T22:18:46Z",
+  "account_id": "act_248997330009151",
+  "data_source": "mcp",
+  "health_score": 29.2,
+  "grade": "F",
+  "category_scores": {
+    "pixel_capi": {
+      "score": 0.0,
+      "weight": 0.3
+    },
+    "creative": {
+      "score": 71.9,
+      "weight": 0.3
+    },
+    "structure": {
+      "score": 33.1,
+      "weight": 0.2
+    },
+    "audience": {
+      "score": 5.0,
+      "weight": 0.2
+    }
+  },
+  "checks": [
+    {
+      "id": "M01",
+      "category": "pixel_capi",
+      "name": "Meta Pixel instalado",
+      "severity": "critical",
+      "result": "FAIL",
+      "finding": "La cuenta no tiene ningún dataset/píxel (ads_get_datasets devolvió 0). Las reservas se cierran por WhatsApp/DM, así que Meta solo ve 'conversaciones iniciadas', nunca reservas reales.",
+      "recommendation": "Crear un dataset en Events Manager. Si hay web con motor de reservas, instalar el píxel; si todo se cierra por WhatsApp, registrar las reservas como evento Purchase vía Conversions API para mensajería (o al menos llevar un conteo semanal conversaciones→reservas).",
+      "fix_time_minutes": 30,
+      "evidence": {
+        "datasets": 0
+      }
+    },
+    {
+      "id": "M02",
+      "category": "pixel_capi",
+      "name": "Conversions API activa",
+      "severity": "critical",
+      "result": "FAIL",
+      "finding": "Sin dataset no hay CAPI. Meta optimiza hacia gente que escribe, no hacia gente que reserva.",
+      "recommendation": "Configurar CAPI para mensajería empresarial cuando exista el dataset.",
+      "fix_time_minutes": 60
+    },
+    {
+      "id": "M03",
+      "category": "pixel_capi",
+      "name": "Deduplicación de eventos",
+      "severity": "critical",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M04",
+      "category": "pixel_capi",
+      "name": "Event Match Quality",
+      "severity": "critical",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M05",
+      "category": "pixel_capi",
+      "name": "Verificación de dominio",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M06",
+      "category": "pixel_capi",
+      "name": "Aggregated Event Measurement",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M07",
+      "category": "pixel_capi",
+      "name": "Eventos estándar vs personalizados",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M08",
+      "category": "pixel_capi",
+      "name": "CAPI Gateway",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M09",
+      "category": "pixel_capi",
+      "name": "Ventana de atribución iOS",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M10",
+      "category": "pixel_capi",
+      "name": "Frescura de datos",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No evaluable: no existe píxel/dataset (ver M01).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M25",
+      "category": "creative",
+      "name": "Diversidad de formatos",
+      "severity": "critical",
+      "result": "WARNING",
+      "finding": "2 formatos activos: video (mayoría) e imagen. No hay carrusel.",
+      "recommendation": "Probar un carrusel de habitaciones/zonas (piscina, salón, junior suite, desayuno).",
+      "fix_time_minutes": 20
+    },
+    {
+      "id": "M26",
+      "category": "creative",
+      "name": "Creatividades por conjunto",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "Cada conjunto tiene 1-2 anuncios, y cuando son 2 es el mismo video duplicado (p. ej. 'Quieres venir a Pereira' aparece en 4 creatividades).",
+      "recommendation": "Agrupar 4-6 anuncios distintos dentro de un mismo conjunto para que Meta elija el mejor.",
+      "fix_time_minutes": 30
+    },
+    {
+      "id": "M27",
+      "category": "creative",
+      "name": "Video vertical 9:16",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "La MCP no devuelve la relación de aspecto; los videos vienen de Reels de Instagram, probablemente verticales.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M28",
+      "category": "creative",
+      "name": "Fatiga creativa",
+      "severity": "critical",
+      "result": "PASS",
+      "finding": "Frecuencia 1.5-2.0 en todos los conjuntos y creatividades de menos de 5 semanas. Sin señales de fatiga.",
+      "fix_time_minutes": null,
+      "evidence": {
+        "frequency_range": [
+          1.52,
+          2.0
+        ]
+      }
+    },
+    {
+      "id": "M29",
+      "category": "creative",
+      "name": "Hook rate (video)",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "Métricas de retención a 3 s no consultadas.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M30",
+      "category": "creative",
+      "name": "Uso de contenido orgánico",
+      "severity": "medium",
+      "result": "PASS",
+      "finding": "Todos los anuncios son publicaciones orgánicas de Instagram promocionadas.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M31",
+      "category": "creative",
+      "name": "UGC / contenido social-native",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No se puede clasificar el estilo del video desde la API. No hay testimonios de huéspedes en los textos.",
+      "recommendation": "Probar un video de huésped real o reseña (UGC).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M32",
+      "category": "creative",
+      "name": "Advantage+ Creative",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No consultado.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-CR1",
+      "category": "creative",
+      "name": "Frescura creativa",
+      "severity": "high",
+      "result": "PASS",
+      "finding": "Creatividades nuevas el 17-oct-2026 (hace 5 días).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-CR2",
+      "category": "creative",
+      "name": "Frecuencia prospección",
+      "severity": "high",
+      "result": "PASS",
+      "finding": "Frecuencia 90 días: 1.52-2.00 (<3.0).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-CR3",
+      "category": "creative",
+      "name": "Frecuencia retargeting",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No hay campañas de retargeting.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-CR4",
+      "category": "creative",
+      "name": "CTR",
+      "severity": "high",
+      "result": "PASS",
+      "finding": "CTR 1.77%-3.91% en todos los conjuntos (umbral 1.0%).",
+      "fix_time_minutes": null,
+      "evidence": {
+        "ctr_min": 1.77,
+        "ctr_max": 3.91
+      }
+    },
+    {
+      "id": "M-AN1",
+      "category": "creative",
+      "name": "Diversidad Andromeda",
+      "severity": "critical",
+      "result": "WARNING",
+      "finding": "~5 conceptos distintos (escapada/pasadía, precio junior suite, salón de reuniones, integración fin de año, desconectar) pero todos con la misma plantilla de texto y el mismo video reutilizado en varias campañas.",
+      "recommendation": "Variar ángulos: experiencia de pareja, familia, empresa, gastronomía/ubicación, testimonio.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M11",
+      "category": "structure",
+      "name": "Número de campañas",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "8 campañas activas con gasto en 90 días, cada una creada con el botón 'Promocionar'. Más de 180 campañas históricas en la cuenta.",
+      "recommendation": "Consolidar en 1-2 campañas desde Ads Manager (objetivo Mensajes) con varios anuncios dentro.",
+      "fix_time_minutes": 45,
+      "evidence": {
+        "active_campaigns_with_spend": 8
+      }
+    },
+    {
+      "id": "M12",
+      "category": "structure",
+      "name": "CBO vs ABO",
+      "severity": "high",
+      "result": "PASS",
+      "finding": "Presupuestos pequeños por conjunto (ABO): adecuado para <$100/día.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M13",
+      "category": "structure",
+      "name": "Fase de aprendizaje",
+      "severity": "critical",
+      "result": "FAIL",
+      "finding": "Inferido: cada conjunto logra 3-40 conversaciones en total (1-5 semanas), muy por debajo de las ~50/semana para salir de aprendizaje. Con 8 conjuntos en paralelo, ninguno puede salir.",
+      "recommendation": "Consolidar el presupuesto en menos conjuntos (ver M11).",
+      "fix_time_minutes": 45
+    },
+    {
+      "id": "M14",
+      "category": "structure",
+      "name": "Reinicios de aprendizaje",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "Historial de ediciones no consultado.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M15",
+      "category": "structure",
+      "name": "Advantage+ Sales",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No aplica: el negocio cierra ventas por mensajería, no por catálogo.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M16",
+      "category": "structure",
+      "name": "Consolidación de conjuntos",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "6 de 8 conjuntos apuntan a las mismas ciudades (Pereira, Armenia, Manizales, Cartago) al mismo tiempo; dos pares usan exactamente los mismos intereses. Compiten entre sí en la subasta.",
+      "recommendation": "Unificar en un conjunto con la misma audiencia y varios anuncios.",
+      "fix_time_minutes": 30
+    },
+    {
+      "id": "M17",
+      "category": "structure",
+      "name": "Distribución de presupuesto",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "Gasto diario estimado por conjunto ≈ 2.000-10.000 COP (≈ US$0.5-2.5/día), por debajo de US$5/día.",
+      "recommendation": "Concentrar en 1-2 conjuntos con ≥ 20.000 COP/día cada uno.",
+      "fix_time_minutes": 15,
+      "evidence": {
+        "spend_90d_cop": 464196
+      }
+    },
+    {
+      "id": "M18",
+      "category": "structure",
+      "name": "Objetivo alineado al negocio",
+      "severity": "high",
+      "result": "WARNING",
+      "finding": "7 conjuntos optimizan 'Conversaciones' (correcto para reservas por WhatsApp/DM). 1 conjunto ('Seguro te hace falta…', 54.633 COP) optimiza visitas al perfil: 219 visitas, 0 conversaciones medibles.",
+      "recommendation": "No usar 'visitas al perfil' para vender; usar Mensajes.",
+      "fix_time_minutes": 5
+    },
+    {
+      "id": "M33",
+      "category": "structure",
+      "name": "Advantage+ Placements",
+      "severity": "medium",
+      "result": "WARNING",
+      "finding": "4 conjuntos solo Instagram; 4 con Facebook+Instagram+WhatsApp.",
+      "recommendation": "Usar ubicaciones Advantage+ en todos (incluye estados de WhatsApp).",
+      "fix_time_minutes": 5
+    },
+    {
+      "id": "M34",
+      "category": "structure",
+      "name": "Revisión de ubicaciones",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No consultado.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M35",
+      "category": "structure",
+      "name": "Configuración de atribución",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No consultado.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M36",
+      "category": "structure",
+      "name": "Estrategia de puja",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "bid_strategy no devuelto; los boosts usan menor costo por defecto.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M37",
+      "category": "structure",
+      "name": "Frecuencia por campaña",
+      "severity": "high",
+      "result": "PASS",
+      "finding": "Frecuencia <2.0 en todas las campañas.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M38",
+      "category": "structure",
+      "name": "Reportes por desglose",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "No consultado.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M39",
+      "category": "structure",
+      "name": "Parámetros UTM",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "Los anuncios llevan a WhatsApp/DM, no a una web.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M40",
+      "category": "structure",
+      "name": "Pruebas A/B activas",
+      "severity": "medium",
+      "result": "FAIL",
+      "finding": "No hay experimentos.",
+      "recommendation": "Ver /ads test.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-ST1",
+      "category": "structure",
+      "name": "Presupuesto vs CPA",
+      "severity": "high",
+      "result": "WARNING",
+      "finding": "Costo por conversación promedio ≈ 2.968 COP; gasto diario por conjunto ≈ 2.000-10.000 COP → 1-3× el CPA (meta ≥5×).",
+      "recommendation": "Subir presupuesto por conjunto consolidando.",
+      "fix_time_minutes": 15
+    },
+    {
+      "id": "M-ST2",
+      "category": "structure",
+      "name": "Uso del presupuesto",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "Presupuestos diarios no devueltos.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-AT1",
+      "category": "structure",
+      "name": "Atribución post-ene-2026",
+      "severity": "high",
+      "result": "N/A",
+      "finding": "No consultado.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-IA1",
+      "category": "structure",
+      "name": "Incremental Attribution",
+      "severity": "medium",
+      "result": "N/A",
+      "finding": "Presupuesto < US$5K/mes.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M-TH1",
+      "category": "structure",
+      "name": "Ubicación Threads",
+      "severity": "low",
+      "result": "FAIL",
+      "finding": "Ningún conjunto incluye Threads.",
+      "recommendation": "Se activa solo al usar ubicaciones Advantage+.",
+      "fix_time_minutes": 2
+    },
+    {
+      "id": "M19",
+      "category": "audience",
+      "name": "Solapamiento de audiencias",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "6 conjuntos simultáneos sobre las mismas ciudades del Eje Cafetero (ver M16).",
+      "recommendation": "Unificar.",
+      "fix_time_minutes": 30
+    },
+    {
+      "id": "M20",
+      "category": "audience",
+      "name": "Públicos personalizados web",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "Sin públicos de sitio web (no hay píxel).",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M21",
+      "category": "audience",
+      "name": "Calidad de lookalike",
+      "severity": "medium",
+      "result": "FAIL",
+      "finding": "Único público: 'Público similar CO 1%' de 2022, inactivo, origen automático de Instagram.",
+      "fix_time_minutes": null
+    },
+    {
+      "id": "M22",
+      "category": "audience",
+      "name": "Advantage+ Audience",
+      "severity": "medium",
+      "result": "WARNING",
+      "finding": "Activado en algunos conjuntos y desactivado en otros. Meta recomienda activarlo en 'Qué tal si nos damos…' (−18% costo por conversación estimado).",
+      "recommendation": "Activar Advantage+ Audience.",
+      "fix_time_minutes": 2
+    },
+    {
+      "id": "M23",
+      "category": "audience",
+      "name": "Exclusiones",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "No se excluye a quien ya escribió o reservó.",
+      "recommendation": "Crear público de 'personas que enviaron mensaje' y excluirlo de prospección.",
+      "fix_time_minutes": 10
+    },
+    {
+      "id": "M24",
+      "category": "audience",
+      "name": "Datos propios",
+      "severity": "high",
+      "result": "FAIL",
+      "finding": "No hay listas de clientes. El hotel tiene teléfonos de huéspedes en WhatsApp.",
+      "recommendation": "Subir lista de teléfonos de huéspedes y crear público de interacción con Instagram (365 días) para retargeting.",
+      "fix_time_minutes": 15
+    }
+  ],
+  "quick_wins": [
+    {
+      "check_id": "M18",
+      "action": "Pausar 'Qué tal si nos damos…' (16.188 COP por conversación, 5× el promedio; además anuncia pasadía con la piscina en remodelación) y el boost de visitas al perfil.",
+      "impact_estimate": "≈ 3.400 COP/día que pasan a conjuntos con 1.500-3.800 COP por conversación",
+      "effort_minutes": 5
+    },
+    {
+      "check_id": "M23",
+      "action": "Crear público 'enviaron mensaje (90 días)' y excluirlo de los conjuntos nuevos.",
+      "impact_estimate": "Evita pagar por gente que ya escribió",
+      "effort_minutes": 10
+    },
+    {
+      "check_id": "M24",
+      "action": "Crear públicos de interacción con Instagram/Facebook (365 días) y subir lista de teléfonos de huéspedes.",
+      "impact_estimate": "Habilita retargeting barato y lookalikes de clientes reales",
+      "effort_minutes": 15
+    },
+    {
+      "check_id": "M17",
+      "action": "Dejar de promocionar cada post por separado: 1 campaña de Mensajes con 1 conjunto ≥ 20.000 COP/día y 4-6 anuncios.",
+      "impact_estimate": "Sale de aprendizaje y baja el costo por conversación",
+      "effort_minutes": 15
+    }
+  ],
+  "critical_issues": [
+    {
+      "check_id": "M01",
+      "blocker_reason": "La cuenta no tiene ningún dataset/píxel (ads_get_datasets devolvió 0). Las reservas se cierran por WhatsApp/DM, así que Meta solo ve 'conversaciones iniciadas', nunca reservas reales.",
+      "estimated_revenue_at_risk": null
+    },
+    {
+      "check_id": "M02",
+      "blocker_reason": "Sin dataset no hay CAPI. Meta optimiza hacia gente que escribe, no hacia gente que reserva.",
+      "estimated_revenue_at_risk": null
+    },
+    {
+      "check_id": "M13",
+      "blocker_reason": "Inferido: cada conjunto logra 3-40 conversaciones en total (1-5 semanas), muy por debajo de las ~50/semana para salir de aprendizaje. Con 8 conjuntos en paralelo, ninguno puede salir.",
+      "estimated_revenue_at_risk": null
+    }
+  ],
+  "notes": "Hotel Villa Juana (Pereira). Últimos 90 días: 464.196 COP en 8 conjuntos; 138 conversaciones por mensaje (≈2.968 COP c/u) + 219 visitas al perfil. Opportunity Score de Meta: 95/100. El 30% de peso de Píxel/CAPI penaliza fuerte a un negocio que vende por WhatsApp; el resto de la cuenta está en mejor estado que el puntaje total sugiere."
+}
