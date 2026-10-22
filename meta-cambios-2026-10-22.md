@@ -37,3 +37,10 @@ Datos de la promoción original: mujeres de 25-54 generaron 21 de 22 conversacio
 ### Gasto diario activo a partir de hoy
 - Mensajes WhatsApp (consolidada): 5.000 COP/día, sin fecha de fin
 - Integraciones (extensión): 10.000 COP/día hasta el 29-oct
+
+## Video de integraciones (preparado, sin publicar)
+
+- Video recortado a 9,2 s (se quitó el final de dron pixelado) y subido a la biblioteca de Meta: video 1765035791383775.
+- Creatividad lista: 3684393625070152 (texto de integraciones, botón "Contactar" que abre wa.me/573218012335).
+- No se publicó: la API no permite el botón nativo de WhatsApp en esta cuenta, y una campaña de clics no puede ir dentro de la campaña de Integraciones (que busca conversaciones). El dueño decidió dejarlo para después.
+- Alternativa manual: en Ads Manager, duplicar el anuncio de Integraciones y elegir este video de la biblioteca (ahí sí está el botón de WhatsApp).
