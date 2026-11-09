@@ -1,0 +1,103 @@
+{
+ "titulo": "La chica que cayó del cielo",
+ "fluido": true,
+ "voces": {
+  "narrador": {
+   "voice": "es-MX-JorgeNeural",
+   "rate": "+2%",
+   "pitch": "-2Hz"
+  }
+ },
+ "lineas": [
+  {
+   "id": "hook1",
+   "who": "narrador",
+   "text": "En mil novecientos setenta y uno, una chica de diecisiete años cayó *tres kilómetros* desde un avión.",
+   "pause": 0.6
+  },
+  {
+   "id": "hook2",
+   "who": "narrador",
+   "text": "Y *sobrevivió*.",
+   "pause": 0.7
+  },
+  {
+   "id": "c1",
+   "who": "narrador",
+   "text": "Se llamaba *Juliane*. Era Nochebuena, y volaba con su madre sobre la selva de *Perú*.",
+   "pause": 0.2
+  },
+  {
+   "id": "c2",
+   "who": "narrador",
+   "text": "Entonces el avión entró en una *tormenta*, y se partió en el aire.",
+   "pause": 0.3
+  },
+  {
+   "id": "c3",
+   "who": "narrador",
+   "text": "Juliane cayó atada a su *asiento*, girando hacia los árboles.",
+   "pause": 0.6
+  },
+  {
+   "id": "c4",
+   "who": "narrador",
+   "text": "Despertó sola, en el suelo de la selva. Con la clavícula *rota*, y heridas en el brazo.",
+   "pause": 0.4
+  },
+  {
+   "id": "c5",
+   "who": "narrador",
+   "text": "Oía los aviones de rescate, pero la selva era tan espesa que *nadie* podía verla.",
+   "pause": 0.45
+  },
+  {
+   "id": "c6",
+   "who": "narrador",
+   "text": "Entonces recordó lo que le enseñó su padre: si te pierdes, *sigue el agua*. El agua lleva a los ríos, y los ríos, a las *personas*.",
+   "pause": 0.4
+  },
+  {
+   "id": "c7",
+   "who": "narrador",
+   "text": "Caminó y nadó durante días, comiendo solo una bolsa de *caramelos*.",
+   "pause": 0.3
+  },
+  {
+   "id": "c8",
+   "who": "narrador",
+   "text": "Su herida se infectó. En una cabaña encontró *gasolina*, y la usó para limpiarla.",
+   "pause": 0.4
+  },
+  {
+   "id": "c9",
+   "who": "narrador",
+   "text": "A la mañana siguiente, unos trabajadores la encontraron y la sacaron en canoa. Habían pasado *once días*.",
+   "pause": 0.5
+  },
+  {
+   "id": "c10",
+   "who": "narrador",
+   "text": "De las más de noventa personas a bordo, fue la *única* que sobrevivió.",
+   "pause": 0.8
+  },
+  {
+   "id": "c11",
+   "who": "narrador",
+   "text": "Pero lo más increíble vino después: Juliane se hizo *bióloga*, y volvió a esa misma selva, para *protegerla*.",
+   "pause": 0.3
+  },
+  {
+   "id": "c12",
+   "who": "narrador",
+   "text": "Dirige *Panguana*, la estación de investigación que fundaron sus padres.",
+   "pause": 0.5
+  },
+  {
+   "id": "cta",
+   "who": "narrador",
+   "text": "¿Tú habrías salido de la selva? Te leo en los comentarios.",
+   "pause": 1.2
+  }
+ ]
+}

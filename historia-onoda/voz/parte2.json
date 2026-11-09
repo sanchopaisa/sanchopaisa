@@ -1,0 +1,85 @@
+{
+ "titulo": "El soldado que no sabía que la guerra terminó (2)",
+ "fluido": true,
+ "voces": {
+  "narrador": {
+   "voice": "es-MX-JorgeNeural",
+   "rate": "+3%",
+   "pitch": "-4Hz"
+  }
+ },
+ "lineas": [
+  {
+   "id": "b0",
+   "who": "narrador",
+   "text": "*Parte dos*. Un soldado japonés llevaba *veintinueve años* escondido en la selva, sin creer que la guerra había terminado.",
+   "pause": 0.5
+  },
+  {
+   "id": "b1",
+   "who": "narrador",
+   "text": "El joven se llamaba *Norio Suzuki*. Acampó solo en la selva, y a los pocos días, Onoda lo encontró.",
+   "pause": 0.5
+  },
+  {
+   "id": "b2",
+   "who": "narrador",
+   "text": "Suzuki le dijo que la guerra había terminado hacía casi *treinta años*.",
+   "pause": 0.3
+  },
+  {
+   "id": "b3",
+   "who": "narrador",
+   "text": "Onoda respondió que solo se rendiría si se lo ordenaba *su comandante*.",
+   "pause": 0.5
+  },
+  {
+   "id": "b4",
+   "who": "narrador",
+   "text": "Suzuki volvió a Japón con fotos de Onoda, y buscó al comandante. Lo encontró trabajando en una *librería*.",
+   "pause": 0.5
+  },
+  {
+   "id": "b5",
+   "who": "narrador",
+   "text": "En marzo de mil novecientos setenta y cuatro, el comandante *Taniguchi* viajó a la isla, y le leyó la orden en persona.",
+   "pause": 0.4
+  },
+  {
+   "id": "b6",
+   "who": "narrador",
+   "text": "Casi treinta años después, había *cumplido* su promesa: había vuelto por él.",
+   "pause": 0.7
+  },
+  {
+   "id": "b7",
+   "who": "narrador",
+   "text": "Onoda entregó su *espada* al presidente de Filipinas, que le concedió el *perdón*.",
+   "pause": 0.4
+  },
+  {
+   "id": "b8",
+   "who": "narrador",
+   "text": "Volvió a un Japón que no reconocía: *rascacielos*, televisión en color y trenes bala.",
+   "pause": 0.4
+  },
+  {
+   "id": "b9",
+   "who": "narrador",
+   "text": "Años después fundó una escuela para enseñar a los jóvenes a vivir en la *naturaleza*.",
+   "pause": 0.3
+  },
+  {
+   "id": "b10",
+   "who": "narrador",
+   "text": "Murió en dos mil catorce, a los *noventa y un* años.",
+   "pause": 0.6
+  },
+  {
+   "id": "cta",
+   "who": "narrador",
+   "text": "¿Tú le habrías creído a los folletos? Te leo en los comentarios.",
+   "pause": 1.2
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "titulo": "El soldado que no sabía que la guerra terminó (1)",
+ "fluido": true,
+ "voces": {
+  "narrador": {
+   "voice": "es-MX-JorgeNeural",
+   "rate": "+3%",
+   "pitch": "-4Hz"
+  }
+ },
+ "lineas": [
+  {
+   "id": "h1",
+   "who": "narrador",
+   "text": "Este soldado siguió peleando en la selva *veintinueve años*, en una guerra que ya había *terminado*.",
+   "pause": 0.6
+  },
+  {
+   "id": "a1",
+   "who": "narrador",
+   "text": "En mil novecientos cuarenta y cuatro, Japón envió al teniente *Hiroo Onoda* a una pequeña isla de Filipinas llamada *Lubang*.",
+   "pause": 0.2
+  },
+  {
+   "id": "a2",
+   "who": "narrador",
+   "text": "Su orden era clara: *nunca rendirse*.",
+   "pause": 0.25
+  },
+  {
+   "id": "a3",
+   "who": "narrador",
+   "text": "Y su comandante le hizo una promesa: puede que tardemos tres años, o cinco, pero pase lo que pase, *volveremos por ti*.",
+   "pause": 0.6
+  },
+  {
+   "id": "a4",
+   "who": "narrador",
+   "text": "Meses después, la guerra *terminó*. Desde los aviones lanzaron *folletos* sobre la selva anunciándolo.",
+   "pause": 0.2
+  },
+  {
+   "id": "a5",
+   "who": "narrador",
+   "text": "Onoda los leyó, y pensó que eran una *trampa* del enemigo.",
+   "pause": 0.5
+  },
+  {
+   "id": "a6",
+   "who": "narrador",
+   "text": "Siguió escondido con tres compañeros. Uno se rindió. Otro murió en un enfrentamiento.",
+   "pause": 0.3
+  },
+  {
+   "id": "a7",
+   "who": "narrador",
+   "text": "Su familia lanzó *cartas* y *fotos* desde el aire. Tampoco se lo creyó.",
+   "pause": 0.4
+  },
+  {
+   "id": "a8",
+   "who": "narrador",
+   "text": "Y durante esos años, sus ataques dejaron *víctimas* entre los campesinos de la isla.",
+   "pause": 0.5
+  },
+  {
+   "id": "a9",
+   "who": "narrador",
+   "text": "En mil novecientos setenta y dos cayó su último compañero. Onoda se quedó *solo*.",
+   "pause": 0.6
+  },
+  {
+   "id": "a10",
+   "who": "narrador",
+   "text": "Hasta que en mil novecientos setenta y cuatro, un joven japonés llegó a la isla con un plan absurdo: encontrar a Onoda, a un *panda*, y al *Abominable Hombre de las Nieves*.",
+   "pause": 0.5
+  },
+  {
+   "id": "cta",
+   "who": "narrador",
+   "text": "Lo que pasó cuando se encontraron, en la *parte dos*.",
+   "pause": 1.2
+  }
+ ]
+}
