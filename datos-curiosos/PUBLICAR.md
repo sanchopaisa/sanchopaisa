@@ -3,7 +3,7 @@
 **Vídeo:** `media/datos-curiosos-7.mp4` (73 s, 1080×1920, -14 LUFS)
 
 **TikTok / Reels:** 7 datos que parecen mentira pero son 100 % reales 🤯 El 7 me voló la cabeza. ¿Cuántos sabías? 👇
-#datoscuriosos #sabiasque #curiosidades #ciencia #aprendeentiktok #fyp
+#datoscuriosos #sabiasque #curiosidades #ciencia #aprendeentiktok
 
 **YouTube Shorts — título:** 7 datos que parecen MENTIRA (pero son reales) #shorts
 **Descripción:** Cleopatra, Venus, tiburones, pulpos, plátanos radiactivos y más árboles que estrellas. Fuentes: NASA (Venus, Vía Láctea), Nature 2015 (número de árboles), registro fósil (tiburones ~450 M años, árboles ~385 M años).
@@ -21,3 +21,5 @@
 - La Universidad de Oxford es más antigua que el Imperio azteca.
 - Los wombats hacen cacas en forma de cubo.
 - Un rayo es unas cinco veces más caliente que la superficie del Sol.
+
+> TikTok permite máximo 5 hashtags por publicación (desde agosto de 2025).

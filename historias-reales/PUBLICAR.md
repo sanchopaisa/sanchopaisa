@@ -7,7 +7,7 @@
 > Esta historia es 100 % real 😳 Quédate hasta el final.
 > ¿Tú habrías salido de la selva? 👇
 
-#historiareal #historiasreales #juliane #peru #amazonas #supervivencia #storytime #fyp #parati
+#historiareal #supervivencia #amazonas #peru #historiasreales
 
 ## YouTube Shorts
 **Título:** Cayó 3 km desde un avión y sobrevivió 11 días en la selva (HISTORIA REAL) #shorts
@@ -27,3 +27,5 @@ Fuentes: Wikipedia (LANSA Flight 508), HowStuffWorks, The Irish Times, Amusing P
 
 ## Nota de respeto
 Es una persona real (y viva). Nunca mostrar víctimas ni detalles morbosos del accidente; el foco es su valentía y lo que hizo después.
+
+> TikTok permite máximo 5 hashtags por publicación (desde agosto de 2025).

@@ -4,7 +4,7 @@
 
 ## TikTok / Reels
 **Texto:** Le regalaba 10 segundos extra al día… hasta que leyó la tapa ⏱️💛 ¿A quién le darías tus 10 segundos?
-**Hashtags:** #historias #animacion #abuelo #reflexion #storytime #cuentoscortos #fyp
+**Hashtags:** #historias #animacion #abuelo #reflexion #cuentoscortos
 
 ## YouTube Shorts
 **Título:** El reloj que regalaba 10 segundos (el final te va a doler) #shorts
@@ -17,3 +17,5 @@
 
 ## Nota
 Las voces son sintéticas (narración IA). Si YouTube pregunta por contenido alterado/sintético: no aplica para animación claramente no realista, pero no hay problema en indicarlo.
+
+> TikTok permite máximo 5 hashtags por publicación (desde agosto de 2025).
