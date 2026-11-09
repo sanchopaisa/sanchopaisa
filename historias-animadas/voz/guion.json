@@ -1,0 +1,31 @@
+{
+  "titulo": "El reloj que regalaba diez segundos",
+  "voces": {
+    "narrador": { "voice": "es-CO-GonzaloNeural", "rate": "+0%", "pitch": "-2Hz" },
+    "lia": { "voice": "es-CO-SalomeNeural", "rate": "+6%", "pitch": "+28Hz" },
+    "reloj": { "voice": "es-AR-TomasNeural", "rate": "+8%", "pitch": "+22Hz" },
+    "abuelo": { "voice": "es-MX-JorgeNeural", "rate": "-14%", "pitch": "-14Hz" }
+  },
+  "lineas": [
+    { "id": "hook1", "who": "narrador", "text": "Este reloj te regala *diez segundos* extra cada día.", "pause": 0.15 },
+    { "id": "hook2", "who": "narrador", "text": "El problema es de *quién* los saca.", "pause": 0.45 },
+    { "id": "desvan", "who": "narrador", "text": "Lía lo encontró en el *desván* de su abuelo, envuelto en un pañuelo.", "pause": 0.3 },
+    { "id": "reloj1", "who": "reloj", "text": "¡Por fin! Cada día te daré *diez segundos* que nadie más tiene.", "pause": 0.35 },
+    { "id": "usa1", "who": "narrador", "text": "Diez segundos parecen *nada*.", "pause": 0.1 },
+    { "id": "usa2", "who": "narrador", "text": "Pero Lía aprendió a *congelar* el mundo.", "pause": 0.2 },
+    { "id": "usa3", "who": "narrador", "text": "Esquivó un balonazo, salvó un helado y nunca más perdió el bus.", "pause": 0.35 },
+    { "id": "lia1", "who": "lia", "text": "¡Esto es lo mejor que me ha pasado!", "pause": 0.4 },
+    { "id": "cansado1", "who": "narrador", "text": "Pero cada vez que el reloj brillaba, el abuelo se veía más *cansado*.", "pause": 0.15 },
+    { "id": "cansado2", "who": "narrador", "text": "Su propio reloj iba cada día más *lento*.", "pause": 0.45 },
+    { "id": "dia30", "who": "narrador", "text": "El día *treinta*, Lía hizo la cuenta: trescientos segundos. *Cinco minutos*.", "pause": 0.3 },
+    { "id": "tapa", "who": "narrador", "text": "Y por primera vez leyó lo que estaba grabado dentro de la tapa.", "pause": 0.5 },
+    { "id": "grabado", "who": "abuelo", "text": "Para Lía. De lo que me queda.", "pause": 0.6 },
+    { "id": "corre", "who": "narrador", "text": "Lía corrió hasta su abuelo.", "pause": 0.2 },
+    { "id": "lia2", "who": "lia", "text": "¡Abuelo, alguien te está *robando* el tiempo!", "pause": 0.35 },
+    { "id": "abuelo1", "who": "abuelo", "text": "Nadie me lo roba, mi vida. Te lo estoy *regalando* yo.", "pause": 0.55 },
+    { "id": "gira", "who": "narrador", "text": "Lía giró la corona del reloj *al revés*.", "pause": 0.15 },
+    { "id": "devuelve", "who": "narrador", "text": "Y le devolvió sus *cinco minutos*.", "pause": 0.4 },
+    { "id": "final", "who": "narrador", "text": "Los gastaron en lo único que de verdad *importaba*.", "pause": 0.6 },
+    { "id": "cta", "who": "narrador", "text": "¿Y tú, a quién le darías tus *diez segundos*?", "pause": 1.2 }
+  ]
+}
