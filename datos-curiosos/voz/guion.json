@@ -1,0 +1,25 @@
+{
+  "titulo": "7 datos que parecen mentira",
+  "fluido": true,
+  "voces": {
+    "narrador": { "voice": "es-MX-JorgeNeural", "rate": "+10%", "pitch": "+0Hz" }
+  },
+  "lineas": [
+    { "id": "hook1", "who": "narrador", "text": "Siete datos que parecen *mentira*, pero son cien por ciento *reales*.", "pause": 0.1 },
+    { "id": "hook2", "who": "narrador", "text": "Y el último te va a *volar la cabeza*.", "pause": 0.45 },
+    { "id": "d1a", "who": "narrador", "text": "Uno. *Cleopatra* vivió más cerca de la llegada a la *Luna* que de la construcción de la *Gran Pirámide*.", "pause": 0.2 },
+    { "id": "d1b", "who": "narrador", "text": "Cuando ella nació, las pirámides ya tenían más de *dos mil años*.", "pause": 0.45 },
+    { "id": "d2a", "who": "narrador", "text": "Dos. En *Venus*, un día dura más que un *año*.", "pause": 0.2 },
+    { "id": "d2b", "who": "narrador", "text": "Gira tan lento que da la vuelta al Sol antes de dar una vuelta sobre sí mismo.", "pause": 0.45 },
+    { "id": "d3a", "who": "narrador", "text": "Tres. Los *tiburones* existen desde antes que los *árboles*.", "pause": 0.2 },
+    { "id": "d3b", "who": "narrador", "text": "Llevan más de *cuatrocientos millones* de años en el océano.", "pause": 0.45 },
+    { "id": "d4a", "who": "narrador", "text": "Cuatro. El *pulpo* tiene *tres corazones*, y su sangre es *azul*.", "pause": 0.2 },
+    { "id": "d4b", "who": "narrador", "text": "Dos bombean sangre a las branquias, y uno al resto del cuerpo.", "pause": 0.45 },
+    { "id": "d5a", "who": "narrador", "text": "Cinco. Los *plátanos* son un poquito *radiactivos*, por su potasio.", "pause": 0.2 },
+    { "id": "d5b", "who": "narrador", "text": "Tranquilo: tendrías que comerte *millones* para que te hiciera daño.", "pause": 0.45 },
+    { "id": "d6", "who": "narrador", "text": "Seis. Para la botánica, el plátano es una *baya*, pero la *fresa* no.", "pause": 0.5 },
+    { "id": "d7a", "who": "narrador", "text": "Y siete. En la Tierra hay más *árboles* que *estrellas* en nuestra galaxia.", "pause": 0.2 },
+    { "id": "d7b", "who": "narrador", "text": "Unos *tres billones* de árboles, frente a unos cuatrocientos mil millones de estrellas.", "pause": 0.5 },
+    { "id": "cta", "who": "narrador", "text": "¿Cuántos sabías? Escríbelo en los comentarios y guárdalo para dejar loco a alguien.", "pause": 1.0 }
+  ]
+}
