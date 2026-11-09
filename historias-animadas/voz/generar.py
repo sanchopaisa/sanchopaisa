@@ -46,44 +46,67 @@ def trim(a):  # quita silencio inicial/final
     s = max(0, idx[0] - int(0.03 * SR)); e = min(len(a), idx[-1] + int(0.08 * SR))
     return a[s:e], s / SR
 
+def words_of(text):
+    """Palabras del texto con su marca de palabra clave (*así*)."""
+    toks = [(x.replace("*", ""), x.startswith("*")) for x in re.findall(r"\*[^*]+\*[^\s*]*|\S+", text)]
+    return [{"text": w, "kw": kw} for txt, kw in toks for w in txt.split()]
+
+def align(flat, bounds, offset, dur):
+    """Asigna a cada palabra el tiempo de su WordBoundary (alineando por orden)."""
+    bi = 0
+    for w in flat:
+        j = bi
+        while j < len(bounds) and norm(bounds[j][0]) != norm(w["text"]) and j < bi + 3:
+            j += 1
+        if j < len(bounds) and norm(bounds[j][0]) == norm(w["text"]):
+            bi = j
+        b = bounds[min(bi, len(bounds) - 1)] if bounds else ("", 0, dur)
+        w["s"] = round(offset + max(0, b[1]), 3); w["e"] = round(offset + max(0, b[2]), 3)
+        bi += 1
+
+def envelope(a):
+    hop = SR // FPS
+    env = [float(np.sqrt(np.mean(a[i:i + hop] ** 2))) for i in range(0, len(a), hop)]
+    mx = max(env) or 1
+    return [round(min(1, x / mx * 1.4), 2) for x in env]
+
+def groups(lineas, fluido):
+    """Modo fluido: frases seguidas del mismo personaje se leen de una sola vez (entonación natural)."""
+    out = []
+    for ln in lineas:
+        if fluido and out and out[-1][-1]["who"] == ln["who"] and out[-1][-1].get("pause", 0.3) < 0.4 and not ln.get("corte"):
+            out[-1].append(ln)
+        else:
+            out.append([ln])
+    return out
+
 async def main(guion_path, public_dir):
     g = json.load(open(guion_path))
+    fluido = g.get("fluido", True)
     tmp = os.path.join(os.path.dirname(guion_path), "tmp"); os.makedirs(tmp, exist_ok=True)
     t = 0.4  # silencio inicial
     chunks = [np.zeros(int(t * SR), np.float32)]
     out_lines = []
-    for ln in g["lineas"]:
-        v = g["voces"][ln["who"]]
-        mp3 = os.path.join(tmp, ln["id"] + ".mp3")
-        bounds = await tts(clean(ln["text"]), v, mp3)
+    for grp in groups(g["lineas"], fluido):
+        v = g["voces"][grp[0]["who"]]
+        mp3 = os.path.join(tmp, grp[0]["id"] + ".mp3")
+        bounds = await tts(" ".join(clean(l["text"]) for l in grp), v, mp3)
         a, cut = trim(decode(mp3))
         dur = len(a) / SR
-        # tokens del texto con palabras clave; se alinean por orden con los WordBoundary
-        toks = [(x.replace("*", ""), x.startswith("*")) for x in re.findall(r"\*[^*]+\*[^\s*]*|\S+", ln["text"])]
-        flat = []
-        for txt, kw in toks:
-            for i, w in enumerate(txt.split()):
-                flat.append({"text": w, "kw": kw})
-        bi = 0
-        for w in flat:
-            # busca el boundary que coincide (números/abreviaturas pueden variar)
-            j = bi
-            while j < len(bounds) and norm(bounds[j][0]) != norm(w["text"]) and j < bi + 3:
-                j += 1
-            if j < len(bounds) and norm(bounds[j][0]) == norm(w["text"]):
-                bi = j
-            b = bounds[min(bi, len(bounds) - 1)] if bounds else ("", 0, dur)
-            w["s"] = round(t + max(0, b[1] - cut), 3); w["e"] = round(t + max(0, b[2] - cut), 3)
-            bi += 1
-        # envolvente RMS por frame (0..1) para mover la boca
-        hop = SR // FPS
-        env = [float(np.sqrt(np.mean(a[i:i + hop] ** 2))) for i in range(0, len(a), hop)]
-        mx = max(env) or 1
-        env = [round(min(1, x / mx * 1.4), 2) for x in env]
-        out_lines.append({"id": ln["id"], "who": ln["who"], "start": round(t, 3), "end": round(t + dur, 3), "words": flat, "env": env})
-        chunks.append(a); chunks.append(np.zeros(int(ln.get("pause", 0.3) * SR), np.float32))
-        t += dur + ln.get("pause", 0.3)
-        print(f"{ln['id']:10s} {dur:5.2f}s  {ln['who']}")
+        bounds = [(b[0], b[1] - cut, b[2] - cut) for b in bounds]
+        per = [words_of(l["text"]) for l in grp]
+        flat = [w for ws in per for w in ws]
+        align(flat, bounds, t, dur)
+        env = envelope(a)
+        for k, (ln, ws) in enumerate(zip(grp, per)):
+            ls = t if k == 0 else ws[0]["s"] - 0.05
+            le = (t + dur) if k == len(grp) - 1 else per[k + 1][0]["s"] - 0.05
+            i0, i1 = int((ls - t) * FPS), int((le - t) * FPS)
+            out_lines.append({"id": ln["id"], "who": ln["who"], "start": round(ls, 3), "end": round(le, 3), "words": ws, "env": env[i0:i1 + 1] or [0]})
+        pause = grp[-1].get("pause", 0.3)
+        chunks.append(a); chunks.append(np.zeros(int(pause * SR), np.float32))
+        print(f"{'+'.join(l['id'] for l in grp):30s} {dur:5.2f}s  {grp[0]['who']}")
+        t += dur + pause
     audio = np.concatenate(chunks)
     with wave.open(os.path.join(public_dir, "voz.wav"), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)

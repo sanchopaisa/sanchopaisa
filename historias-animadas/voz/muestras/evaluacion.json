@@ -1,0 +1,128 @@
+[
+ {
+  "n": "1",
+  "voz": "es-MX-JorgeNeural",
+  "precision": 85.4,
+  "confianza": 95.1,
+  "ppm": 146,
+  "pausas_largas": 5,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- quién",
+   "+ quien",
+   "- los",
+   "+ lo",
+   "+ desbandezo",
+   "- desván"
+  ]
+ },
+ {
+  "n": "2",
+  "voz": "en-US-AndrewMultilingualNeural",
+  "precision": 89.8,
+  "confianza": 93.3,
+  "ppm": 165,
+  "pausas_largas": 5,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- los",
+   "+ lo",
+   "- lía",
+   "+ lia",
+   "- diez",
+   "+ 10"
+  ]
+ },
+ {
+  "n": "3",
+  "voz": "en-US-BrianMultilingualNeural",
+  "precision": 89.8,
+  "confianza": 95.6,
+  "ppm": 150,
+  "pausas_largas": 5,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- los",
+   "+ lo",
+   "- lía",
+   "+ lia",
+   "- desván",
+   "+ desbán"
+  ]
+ },
+ {
+  "n": "4",
+  "voz": "es-ES-AlvaroNeural",
+  "precision": 86.6,
+  "confianza": 95.2,
+  "ppm": 146,
+  "pausas_largas": 5,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- quién",
+   "+ quien",
+   "- los",
+   "+ lo",
+   "- lía",
+   "+ lia"
+  ]
+ },
+ {
+  "n": "5",
+  "voz": "es-CO-GonzaloNeural",
+  "precision": 91.8,
+  "confianza": 95.3,
+  "ppm": 162,
+  "pausas_largas": 4,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- los",
+   "+ lo",
+   "- diez",
+   "+ 10",
+   "- parecen",
+   "+ parece"
+  ]
+ },
+ {
+  "n": "6",
+  "voz": "en-US-AvaMultilingualNeural",
+  "precision": 89.8,
+  "confianza": 95.9,
+  "ppm": 176,
+  "pausas_largas": 5,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- los",
+   "+ lo",
+   "- lía",
+   "+ lia",
+   "- diez",
+   "+ 10"
+  ]
+ },
+ {
+  "n": "7",
+  "voz": "es-MX-DaliaNeural",
+  "precision": 88.7,
+  "confianza": 95.2,
+  "ppm": 145,
+  "pausas_largas": 5,
+  "errores": [
+   "- diez",
+   "+ 10",
+   "- los",
+   "+ lo",
+   "+ desbande",
+   "- desván",
+   "- de",
+   "- diez"
+  ]
+ }
+]
