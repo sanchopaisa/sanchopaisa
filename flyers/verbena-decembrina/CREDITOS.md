@@ -7,3 +7,6 @@
 - Fondo, gente bailando bajo luces: https://www.pexels.com/photo/vibrant-night-party-under-string-lights-30505255/ (cole peters)
 - Acordeonero: https://www.pexels.com/photo/a-man-playing-the-accordion-while-sitting-on-a-rock-5104135/ (FRANK MERIÑO)
 - Textura de luces: https://www.pexels.com/photo/a-close-up-of-string-lights-10545628/ (Alex Hoces)
+
+## v2 minimalista (`v2-minimalista/`)
+- Foto de jóvenes de fiesta: https://www.pexels.com/photo/people-having-fun-in-a-party-4306963/ (Pexels, licencia libre)
