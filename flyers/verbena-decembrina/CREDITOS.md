@@ -10,3 +10,6 @@
 
 ## v2 minimalista (`v2-minimalista/`)
 - Foto de jóvenes de fiesta: https://www.pexels.com/photo/people-having-fun-in-a-party-4306963/ (Pexels, licencia libre)
+
+## v3 campo (`v3-campo/`)
+- Jinete al atardecer: https://www.pexels.com/photo/cowboy-sitting-on-horse-20197333/ (Pexels, licencia libre)
